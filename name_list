@@ -1,0 +1,20 @@
+import keyboard
+from time import sleep
+s = '''
+
+'''
+n = ''
+s = s.split()
+for i in range(0, len(s),2):
+    print(s[i]+' '+ s[i+1],end=' ')
+    key = keyboard.read_key()
+    sleep(0.2)
+    if key == "1":
+        n += s[i+1]+' '+ s[i]  +'\n'
+    elif key == "2":
+        print('удалили задвоение')
+    elif key == "enter":
+        n += s[i]+' '+ s[i+1] + '\n'
+    print()
+print('_________________________________')
+print(n)
